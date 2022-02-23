@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="number" id="nam">
+
+<p id="kq"></p>
+
+<button onclick="change()">Submit</button>
+
+<script>
+    function change(){
+
+        let a = document.getElementById('nam').value;
+
+        tk = a/100;
+
+        document.getElementById('kq').innerHTML = tk + '.' + 'Thế Kỉ' ;
+    }
+</script>
+</body>
+</html>

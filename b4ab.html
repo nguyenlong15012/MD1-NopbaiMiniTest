@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="a">
+<input type="number" id="b">
+<input type="number" id="c">
+<br>
+<p id="kq"></p>
+
+
+
+<p id="kq1"></p>
+<p id="kq2"></p>
+<p id="kq3"></p>
+<p id="kq4"></p>
+
+<button onclick="tinh()">Kết Quả</button>
+</body>
+</html>
+
+<script>
+    function tinh(){
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+
+        document.getElementById('kq').innerHTML = 'Chu vi hinh vuong = ' + (a*4) + 'm';
+
+        document.getElementById('kq1').innerHTML = 'Diện tích hình vuông = '+ (a*a) + 'm^2';
+
+        document.getElementById('kq2').innerHTML = 'a^2 = ' + (a*a);
+
+        document.getElementById('kq3').innerHTML = 'a^b = ' + Math.pow(a, b);;
+    }
+
+</script>

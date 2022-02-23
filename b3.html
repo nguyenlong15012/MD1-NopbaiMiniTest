@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="rs"></h1>
+<input type="number" id="a">
+<input type="number" id="b">
+
+<button onclick="tinh()">Tính</button>
+</body>
+</html>
+<script>
+    function tinh(){
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        document.getElementById("rs").innerHTML = '=  ' + (a*b);
+    }
+</script>

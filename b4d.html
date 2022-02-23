@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="a">
+<input type="number" id="b">
+<input type="number"id="c">
+
+<p id="kq"></p>
+
+<button onclick="check()">Submit</button>
+</body>
+</html>
+
+<script>
+    function check(){
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let c = document.getElementById('c').value;
+
+        if(a+b>c || a+c>b || b+c>a){
+            if(a==b && b==c){
+                document.getElementById('kq').innerHTML = 'Đây là tam giác đều';
+            }
+            else if(a==b && a!=c || a==c && a!=b || b==c && a!=b){
+                if(a*a+b*b==c*c || a*a+c*c==b*b || b*b+c*c==a*a){
+                    document.getElementById('kq').innerHTML = 'Đây là tam giác vuông cân';
+                }else{
+                    document.getElementById('kq').innerText = 'Đây là tam giác cân';
+                }
+            }else if((a*a+b*b==c*c || a*a+c*c==b*b || b*b+c*c==a*a)&& !(a==b && a!=c || a==c && a!=b || b==c && a!=b)){
+                document.getElementById('kq').innerHTML = 'Đây là tam giác vuông';
+            }else {
+                document.getElementById('kq').innerHTML = 'Đây là tam giác thường';
+            }
+        }else {
+            document.getElementById('kq').innerHTML = 'Đây không phải là tam giác';
+        }
+    }
+</script>
